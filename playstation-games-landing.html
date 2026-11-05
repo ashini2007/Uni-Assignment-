@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>گیم‌نیا | بازی‌های افسانه‌ای پلی‌استیشن</title>
+<!-- برای شخصی‌سازی: نام برند (گیم‌نیا)، لینک تلگرام/اینستاگرام و متن‌ها را عوض کنید. -->
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#080B17;--surface:#10162B;--ink:#EEF1FF;--muted:#9CA8D0;--blue:#3D7BFF;--violet:#8A5CFF;--line:#222B52;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{background:radial-gradient(ellipse at 80% 0%,#1B2C6B,transparent 60%),radial-gradient(ellipse at 10% 100%,#3A2275,transparent 55%),var(--bg)}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:800;font-size:1.5rem}
+.logo i{font-style:normal;color:var(--blue)}
+nav a{margin-inline-start:24px;font-size:.95rem;color:var(--muted)}
+nav a.pill{border:1px solid var(--blue);color:#BFD2FF;padding:6px 18px;border-radius:999px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:28px 0 80px}
+h1{font-size:clamp(2.1rem,5.8vw,3.8rem);line-height:1.35;font-weight:800;margin:0 0 18px}
+h1 span{background:linear-gradient(100deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-weight:300;font-size:1.12rem;color:var(--muted);max-width:30rem;margin:0 0 30px}
+.btn{display:inline-block;padding:13px 30px;border-radius:12px;font-weight:600;border:1.5px solid var(--blue);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:linear-gradient(135deg,var(--blue),var(--violet));border-color:transparent;color:#fff}
+.btn.ghost{margin-inline-start:10px;color:#BFD2FF}
+.pad{width:100%;max-width:420px;margin:0 auto;display:block;filter:drop-shadow(0 20px 50px #3D7BFF55)}
+.float{animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion: reduce){.float{animation:none}}
+section{padding:72px 0}
+h2{font-size:clamp(1.55rem,3.6vw,2.25rem);margin:0 0 10px;font-weight:800}
+.sub{color:var(--muted);margin:0 0 36px;max-width:36rem}
+.games{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.game{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+.game:hover{transform:translateY(-4px);border-color:var(--blue)}
+.cover{height:120px;position:relative;display:flex;align-items:flex-end;padding:12px 14px;font-weight:800;font-size:1.05rem;direction:ltr;text-shadow:0 2px 8px #0008}
+.game .t{padding:14px 16px 18px}
+.tag{display:inline-block;font-size:.75rem;background:#1B2550;color:#BFD2FF;border-radius:6px;padding:0 10px;margin-bottom:6px}
+.game p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.8}
+.why{background:var(--surface);border-block:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.why h3{margin:0 0 6px;font-size:1.15rem;border-inline-start:4px solid var(--blue);padding-inline-start:12px}
+.why p{margin:0;color:var(--muted)}
+.cta{text-align:center;border-radius:28px;padding:56px 24px;background:radial-gradient(ellipse at 50% 0%,#2B3FA0,transparent 70%),var(--surface);border:1px solid var(--line)}
+.cta p{color:var(--muted);margin:0 0 26px}
+footer{padding:30px 0 44px;color:var(--muted);font-size:.85rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:50px}
+  .pad{max-width:290px;order:-1}
+  .games{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr;gap:22px}
+  nav a:not(.pill){display:none}
+  section{padding:50px 0}
+  .cover{height:96px;font-size:.92rem}
+}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header>
+      <div class="logo">گیم‌<i>نیا</i></div>
+      <nav><a href="#games">بازی‌ها</a><a href="#why">چرا اینها؟</a><a class="pill" href="#join">عضویت</a></nav>
+    </header>
+    <div class="hero-grid">
+      <div>
+        <h1>بازی‌هایی که <span>تاریخ</span> ساختند</h1>
+        <p>معروف‌ترین بازی‌های پلی‌استیشن را بشناسید؛ از اساطیر نورس تا خیابان‌های نیویورک، با معرفی کوتاه و کاربردی.</p>
+        <a class="btn fill" href="#games">دیدن بازی‌ها</a>
+        <a class="btn ghost" href="#join">دریافت خبرنامه</a>
+      </div>
+      <svg class="pad float" viewBox="0 0 400 260" role="img" aria-label="دسته‌ی بازی">
+        <defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A3A7C"/><stop offset="1" stop-color="#121A3D"/></linearGradient></defs>
+        <path d="M110 40 H290 Q330 40 350 90 L380 190 Q392 232 356 236 Q330 238 312 212 L292 180 H108 L88 212 Q70 238 44 236 Q8 232 20 190 L50 90 Q70 40 110 40Z" fill="url(#b)" stroke="#4B63C4" stroke-width="3"/>
+        <g fill="#0B1230" stroke="#4B63C4" stroke-width="2"><circle cx="140" cy="140" r="26"/><circle cx="260" cy="140" r="26"/></g>
+        <g fill="#8DA6FF"><circle cx="140" cy="140" r="12"/><circle cx="260" cy="140" r="12"/></g>
+        <g stroke="#B7C6FF" stroke-width="7" stroke-linecap="round"><path d="M80 78v28M66 92h28"/></g>
+        <g fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M320 62l-9 16h18z" stroke="#5CE0B1"/>
+          <circle cx="346" cy="90" r="8" stroke="#FF6B7A"/>
+          <path d="M311 98l16 16M327 98l-16 16" stroke="#6FA3FF"/>
+          <rect x="285" y="82" width="16" height="16" rx="2" stroke="#E98CFF"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="games">
+  <div class="wrap">
+    <h2>بازی‌های افسانه‌ای</h2>
+    <p class="sub">هشت عنوان معروف که هر کدام برای خودشان یک پدیده شدند.</p>
+    <div class="games">
+      <div class="game"><div class="cover" style="background-image: url('GodOfWar.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">God of War</div><div class="t"><span class="tag">اکشن، ماجرایی</span><p>ماجرای کریتوس و پسرش در دنیای اساطیر نورس (۲۰۱۸).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('LastOfUs.webp'); background-size:cover; background-repeat: no-repeat; background-position: center;">The Last of Us</div><div class="t"><span class="tag">بقا، داستانی</span><p>سفری احساسی در دنیای ویران‌شده، ساخته‌ی ناتی داگ (۲۰۱۳).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('SpiderMan.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Spider-Man</div><div class="t"><span class="tag">دنیای باز</span><p>تاب خوردن بین آسمان‌خراش‌های نیویورک، از استودیوی اینسامنیاک (۲۰۱۸).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('UnCharted4.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Uncharted 4</div><div class="t"><span class="tag">ماجراجویی</span><p>شکار گنج با ناتان دریک، پر از صحنه‌های سینمایی (۲۰۱۶).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('HorizonZeroDown.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Horizon Zero Dawn</div><div class="t"><span class="tag">نقش‌آفرینی</span><p>آلوی کماندار و دنیایی پر از ماشین‌های غول‌پیکر (۲۰۱۷).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('GhostOfTsushima.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Ghost of Tsushima</div><div class="t"><span class="tag">سامورایی</span><p>نبرد برای نجات جزیره‌ی تسوشیما از مهاجمان مغول (۲۰۲۰).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('BloodBorne.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Bloodborne</div><div class="t"><span class="tag">سخت، گوتیک</span><p>شهری تاریک و نبردهای دشوار، ساخته‌ی فرام‌سافتور (۲۰۱۵).</p></div></div>
+      <div class="game"><div class="cover" style="background-image: url('GranTurismo.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;">Gran Turismo</div><div class="t"><span class="tag">رانندگی</span><p>مجموعه‌ی شبیه‌ساز رانندگی که از سال ۱۹۹۷ شروع شد.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <h2>چرا همه درباره‌شان حرف می‌زنند؟</h2>
+    <p class="sub">سه دلیل که این بازی‌ها را متمایز کرده است.</p>
+    <div class="why-grid">
+      <div><h3>داستان‌های قوی</h3><p>شخصیت‌ها و روایت‌هایی که بعد از پایان بازی هم در ذهن می‌مانند.</p></div>
+      <div><h3>گرافیک سینمایی</h3><p>جزئیات تصویری و صحنه‌هایی که شبیه فیلم‌های بزرگ هستند.</p></div>
+      <div><h3>تجربه‌ی منحصربه‌فرد</h3><p>بیشترشان فقط روی پلی‌استیشن عرضه شده‌اند و سبک خودشان را دارند.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="cta">
+      <h2>از تازه‌ترین بازی‌ها باخبر شوید</h2>
+      <p>اخبار، معرفی بازی‌ها و تخفیف‌ها را برایتان می‌فرستیم.</p>
+      <a class="btn fill" href="https://t.me/your_channel">عضویت در کانال تلگرام</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer><span>© گیم‌نیا</span><span>صفحه‌ای غیررسمی. نام بازی‌ها و برندها متعلق به صاحبان آنهاست.</span></footer>
+</div>
+</body>
+</html>
